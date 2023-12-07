@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pdf-creator-node": "^2.3.5"
+    "font-awesome": "^4.7.0",
+    "pdf-creator-node": "^2.3.5",
+    "qrcode": "^1.5.3"
   }
 }
