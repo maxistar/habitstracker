@@ -6,27 +6,28 @@
     <link rel="stylesheet" href="{{ cssFonts }}" >
 </head>
 <body>
-<i class="icon-skype_24dp">dfd</i>
 
-
-<table border="1" class="habitsTable">
-    <tr>
-        <th>Day</th>
-        {{#each habits}}
-        <th>{{ this.name }}</th>
+<div id="habit-page">
+    <table border="1" class="habits-table">
+        <tr>
+            <th>Day</th>
+            {{#each habits}}
+            <th width="10%"><div class="rotate">{{ this.name }}</div></th>
+            {{/each}}
+        </tr>
+        {{#each tableRows}}
+        <tr><td class="day-td">{{this.day}}</td>
+            {{#each this.habits}}
+            <td></td>
+            {{/each}}
+        </tr>
         {{/each}}
-    </tr>
-    {{#each tableRows}}
-    <tr><td>{{this.day}}</td>
-        {{#each this.habits}}
-        <td></td>
-        {{/each}}
-    </tr>
-    {{/each}}
-</table>
-<div class="qrcode">
-    <img src="{{qrcode}}" alt="qrcode" class="qrcode" />
+    </table>
+    <div class="qrcode">
+        <img src="{{qrcode}}" alt="qrcode" class="qrcode" />
+    </div> 
 </div>
+
 
 </body>
 </html>

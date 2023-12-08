@@ -6,42 +6,26 @@ const QRCode = require("qrcode");
 // Read HTML Template
 var html = fs.readFileSync("template.html", "utf8");
 
-var options = {
-    format: "A4",
-    orientation: "portrait",
-    border: "10mm",
-    header: {
-        height: "10mm",
-        contents: '<div style="text-align: center;">Habit Calendar</div>'
-    },
-    footer: {
-        height: "10mm",
-        contents: {
-            //first: 'Cover page',
-            2: 'Second page', // Any page number is working. 1-based index
-            default: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>', // fallback value
-            //last: 'Last Page'
-        }
-    }
-};
+
 
 let tableRows = [];
-const numberOfDays = 30;
+const numberOfDays = 44;
 const habits = [
-    {name: "Habit 1"},
-    {name: "Habit 2"},
-    {name: "Habit 3"},
-    {name: "Habit 4"},
-    {name: "Habit 5"},
-    {name: "Habit 6"},
+    {name: "Wake up Exercise"},
+    {name: "Do not eat after 18PM"},
+    {name: "Go sleep without phone"},
+    {name: "Use mouth freshener"},
+    {name: "Use deodorant"},
+    {name: "Read with Iura"},
+    {name: "Say Good Night"},
+    {name: "10 Sätze in Deutsch"},
+    {name: "15 minutes eye relax"},
 ];
 
 
-for(let i = 1; i < numberOfDays; i++) {
-    tableRows.push({day: i, habits: habits})
+for(let i = 0; i < numberOfDays; i++) {
+    tableRows.push({day: i + 1, habits: habits})
 }
-
-
 
 
 async function createQRCode(url) {
@@ -80,6 +64,22 @@ function convertFileToBase64(filePath) {
 async function main() {
     const qrcode = await createQRCode('http://maxistar.ru');
 
+    const options = {
+        format: "A4",
+        orientation: "portrait",
+        border: "8mm",
+        header: {
+            height: "10mm",
+            contents: '<div style="text-align: center;">Habit Calendar</div>'
+        },
+        footer: {
+            height: "5mm",
+            contents: {
+                default: '<span style="color: #444;">Habits Tracker v0.1</span>',
+            }
+        }
+    };
+    
     const document = {
         html: html,
         data: {
@@ -105,11 +105,3 @@ async function main() {
 
 main()
     .then()
-
-
-
-
-
-
-
-
