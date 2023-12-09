@@ -12,7 +12,8 @@
         <tr>
             <th>Day</th>
             {{#each habits}}
-            <th width="10%"><div class="rotate">{{ this.name }}</div></th>
+            <th><img src="{{ this.textImage }}" alt="qrcode" class="habit-image" />
+            </th>
             {{/each}}
         </tr>
         {{#each tableRows}}
@@ -23,9 +24,10 @@
         </tr>
         {{/each}}
     </table>
-    <div class="qrcode">
-        <img src="{{qrcode}}" alt="qrcode" class="qrcode" />
-    </div> 
+    <img src="{{leftTopCornerImage}}" alt="qrcode" class="invisible-image" />
+    <img src="{{rightTopCornerImage}}" alt="qrcode" class="invisible-image" />
+    <img src="{{leftBottomCornerImage}}" alt="qrcode" class="invisible-image" />
+    <img src="{{qrcode}}" alt="qrcode" class="qrcode invisible-image" />
 </div>
 
 

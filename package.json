@@ -1,15 +1,17 @@
 {
   "name": "habbitslist",
   "version": "1.0.0",
-  "description": "",
+  "description": "small habits tracker calendar generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index.js"
+    "build": "node index.js",
+    "dev": "fswatch -o ./ -e node_modules -e output.pdf | xargs -n1 -I{} npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^2.11.2",
     "font-awesome": "^4.7.0",
     "pdf-creator-node": "^1.4.2",
     "qrcode": "^1.5.3"

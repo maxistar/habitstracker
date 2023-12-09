@@ -86,6 +86,11 @@ body {
     font-size: 8pt;
 }
 
+.habit-image {
+    width: 50px;
+    height: 125px;
+}
+
 #habit-page {
     position: relative;
     top: 0;
@@ -109,15 +114,52 @@ h1 {
 }
 
 .qrcode {
-    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .qrcode img {
-    width: 2.5cm;
-    height: 2.5cm;
+    width: 2cm;
+    height: 2cm;
 }
 
 .habits-table {
     border-collapse: collapse;
     width: 100%;
+}
+
+.left-top-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.left-bottom-marker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.right-top-marker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.invisible-image {
+    display: none;
+}
+
+.habit-version {
+    color: #444;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
 }
