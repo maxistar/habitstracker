@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node index.js",
-    "dev": "fswatch -o ./ -e node_modules -e output.pdf | xargs -n1 -I{} npm run build"
+    "dev": "fswatch -o ./ -e node_modules -e build | xargs -n1 -I{} npm run build"
   },
   "author": "",
   "license": "ISC",

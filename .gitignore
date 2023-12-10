@@ -1,2 +1,5 @@
 node_modules
 .idea
+build
+habits.config.json
+.DS_Store
