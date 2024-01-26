@@ -1,0 +1,16 @@
+{
+  "habits": [
+    {"name": "Wake up Exercise"},
+    {"name": "Do not eat after 18PM"},
+    {"name": "Go sleep without phone"},
+    {"name": "Use mouth freshener"},
+    {"name": "Use deodorant"},
+    {"name": "Read the book"},
+    {"name": "Say Good Night"},
+    {"name": "Learn Foreign Language"},
+    {"name": "15 minutes eye relax"}
+  ],
+  "qrcode": "https://github.dev/maxistar/habitstracker/",
+  "numberOfDays": 40,
+  "output": "./build/myhabits.pdf"
+}
